@@ -49,6 +49,18 @@ export const constantRoutes = [
       hidden: true
     }]
   },
+
+  {
+    path: '/swiper',
+    component: Layout,
+    children: [
+      {
+        path: 'list',
+        component: () => import('@/views/swiper/index'),
+        meta: { title: '轮播图管理', icon: 'table' }
+      }
+    ]
+  },
   {
     path: '/login',
     component: () => import('@/views/login/index'),
